@@ -10,7 +10,7 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
 @Route("")
-@PageTitle("Ward X")
+@PageTitle("Ward 1")
 public class MainView extends VerticalLayout {
 
     public MainView() {
