@@ -1,4 +1,4 @@
-package com.vaadin.tutorial.crm.ui.view.main;
+package com.vaadin.tutorial.crm.ui.view;
 
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;

@@ -1,24 +1,22 @@
-package com.vaadin.tutorial.crm.ui.view.main;
+package com.vaadin.tutorial.crm.ui.view.wards;
 
 import com.vaadin.flow.component.html.H1;
-import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import com.vaadin.flow.component.textfield.TextArea;
-import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import com.vaadin.tutorial.crm.ui.view.PatientLayout;
 
-@Route("")
-@PageTitle("Ward 1")
-public class MainView extends VerticalLayout {
+@Route("Ward2")
+@PageTitle("Ward 2")
+public class Ward2 extends VerticalLayout {
 
-    public MainView() {
+    public Ward2() {
 
         setAlignItems(Alignment.CENTER);
         setJustifyContentMode(JustifyContentMode.CENTER);
         HorizontalLayout h1 = new HorizontalLayout();
-        add(new H1("Ward 1"), h1);
+        add(new H1("Ward 2"), h1);
         h1.setWidth("100%");
         h1.setHeight("220px");
         PatientLayout p1 = new PatientLayout("Olly","4","1");
@@ -32,7 +30,7 @@ public class MainView extends VerticalLayout {
 
         HorizontalLayout h2 = new HorizontalLayout();
         h2.setWidth("100%");
-        h2.setHeight("22  0px");
+        h2.setHeight("220px");
         PatientLayout p5 = new PatientLayout("John","13","5");
         PatientLayout p6 = new PatientLayout("Sean","9","6");
         PatientLayout p7  = new PatientLayout("Charlie","23","7");
