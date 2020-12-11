@@ -1,17 +1,31 @@
 package com.vaadin.tutorial.crm.ui.view.wards;
 
+import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import com.vaadin.tutorial.crm.backend.entity.Patient;
+import com.vaadin.tutorial.crm.backend.service.PatientService;
 import com.vaadin.tutorial.crm.ui.view.PatientLayout;
 
 @Route("Ward1")
 @PageTitle("Ward 1")
 public class Ward1 extends VerticalLayout {
 
+    //private PatientService patientService;
+    private Grid<Patient> grid = new Grid<>(Patient.class);
+
     public Ward1() {
+
+        //this.patientService = patientService;
+        addClassName("list-view");
+        setSizeFull();
+        configureGrid();
+
+        add(grid);
+        //updateList();
 
         setAlignItems(Alignment.CENTER);
         setJustifyContentMode(JustifyContentMode.CENTER);
@@ -44,4 +58,14 @@ public class Ward1 extends VerticalLayout {
         add(h2);
 
     }
+
+   private void configureGrid() {
+        grid.addClassName("patient-grid");
+        grid.setSizeFull();
+        grid.setColumns("name", "dob");
+    }
+    /*private void updateList() {
+        grid.setItems(patientService.findAll());
+    }*/
+
 }
